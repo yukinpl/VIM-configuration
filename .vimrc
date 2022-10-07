@@ -27,6 +27,22 @@ filetype indent on
 
 
 
+nmap <C-S> <ESC>:w<CR>
+nmap <C-T> <ESC>:tabnew<CR>
+nmap <C-,> <ESC>:tabprev<CR>
+nmap <C-.> <ESC>:tabnext<CR>
+
+cmap <C-S> <ESC>:w<CR>
+cmap <C-T> <ESC>:tabnew<CR>
+cmap <C-,> <ESC>:tabprev<CR>
+cmap <C-.> <ESC>:tabnext<CR>
+
+imap <C-S> <ESC>:w<CR>
+imap <C-T> <ESC>:tabnew<CR>
+imap <C-,> <ESC>:tabprev<CR>
+imap <C-.> <ESC>:tabnext<CR>
+
+
 
 
 " BEGIN 
