@@ -22,6 +22,9 @@ set laststatus=2
 
 set backspace=indent,eol,start
 
+set lines=50
+set columns=100
+
 syntax on
 filetype indent on
 
