@@ -39,7 +39,7 @@ cmap <C-T> <ESC>:tabnew<CR>
 cmap <C-,> <ESC>:tabprev<CR>
 cmap <C-.> <ESC>:tabnext<CR>
 
-imap <C-S> <ESC>:w<CR>
+imap <C-S> <ESC>:w<CR>i
 imap <C-T> <ESC>:tabnew<CR>
 imap <C-,> <ESC>:tabprev<CR>
 imap <C-.> <ESC>:tabnext<CR>
