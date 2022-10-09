@@ -11,6 +11,7 @@ set hlsearch
 
 set ruler
 set nocompatible
+set visualbell
 
 set fileencoding=utf-8
 set fencs=utf-8,ucs-bom,euc-kr
@@ -25,8 +26,6 @@ set backspace=indent,eol,start
 set lines=50
 set columns=100
 
-syntax on
-filetype indent on
 
 
 
@@ -46,19 +45,33 @@ imap <C-,> <ESC>:tabprev<CR>
 imap <C-.> <ESC>:tabnext<CR>
 
 
+syntax on
+filetype indent on
 
 
 " BEGIN 
 
 " Normal
-highlight Normal      guifg=#999999 guibg=#000000
+highlight Normal        guifg=#999999 guibg=#000000
 
 " Line number of VIM ( left of screen )
-highlight LineNr      guifg=#999999 guibg=#000000
+highlight LineNr        guifg=#444444 guibg=#000000
 
 " comment     ----> any comment
-highlight Comment     guifg=#666666 guibg=#000000
+highlight Comment       guifg=#666666 guibg=#000000
 
+" statusline
+highlight StatusLine    guifg=#2980b9 guibg=#111111
+
+highlight StatusLineNC  guifg=#2980b9 guibg=#111111
+
+" nonText
+highlight NonText       guifg=#666666 guibg=#000000
+
+"highlight Cursor        guibg=#666666
+highlight Cursor        guibg=#ff336e
+
+highlight Visual        guibg=#fdedec
 " END
 
 
@@ -68,13 +81,13 @@ highlight Comment     guifg=#666666 guibg=#000000
 " BEGIN IDENTIFIER
 
 " identifier   ----> any variable name
-highlight Identifier   guifg=#aaaaaa guibg=#000000
+highlight Identifier     guifg=#aaaaaa guibg=#000000
 
 " function     ----> function name
-highlight Function     guifg=#bbbbbb guibg=#000000
+highlight Function       guifg=#cccccc guibg=#000000
 
 " tag          ----> CTRL
-highlight Tag          guifg=#ff3363 guibg=#000000
+highlight Tag            guifg=#ff3363 guibg=#000000
 
 " END   IDENTIFIER
 
@@ -85,16 +98,16 @@ highlight Tag          guifg=#ff3363 guibg=#000000
 " BEGIN PreProc
 
 " include      ----> #include
-highlight Include      guifg=#999999 guibg=#000000
+highlight Include        guifg=#cccccc guibg=#000000
  
 " define       ----> #define
-highlight Define       guifg=#999999 guibg=#000000
+highlight Define         guifg=#cccccc guibg=#000000
 
 " Macro        ----> same with above
-highlight Macro        guifg=#999999 guibg=#000000
+highlight Macro          guifg=#cccccc guibg=#000000
 
 " PreCondit    ----> #if , #endif , #else
-highlight Precondit    guifg=#999999 guibg=#000000
+highlight Precondit      guifg=#cccccc guibg=#000000
 
 " END   PreProc
 
@@ -104,16 +117,16 @@ highlight Precondit    guifg=#999999 guibg=#000000
 " BEGIN TYPE
 
 " type         ----> int , long , char , etc.
-highlight Type         guifg=#58d68d guibg=#000000
+highlight Type           guifg=#27ae60 guibg=#000000
 
 " StorageClass ----> static, register, volatile, ...
-highlight StorageClass guifg=#58d68d guibg=#000000
+highlight StorageClass   guifg=#2980b9 guibg=#000000
 
 " Structure    ----> struct , unionn , enum
-highlight Structure    guifg=#58d68d guibg=#000000
+highlight Structure      guifg=#2980b9 guibg=#000000
 
 " typedef      ----> typedef
-highlight Typedef      guifg=#68d68d guibg=#000000
+highlight Typedef        guifg=#68d68d guibg=#000000
 
 " END   TYPE
 
@@ -122,19 +135,22 @@ highlight Typedef      guifg=#68d68d guibg=#000000
 " BEGIN CONSTANT
 
 " Character    ----> a character constant : 'a' , 'S' , '\n'
-highlight Character    guifg=#ff3363 guibg=#000000
+highlight Character      guifg=#ff336e guibg=#000000
+
+" SpeicalChar  ----> speical character in a constant
+highlight SpeicialChar   guifg=#f4d03f guibg=#000000
 
 " string       ----> constant "this is a string"
-highlight String       guifg=#ff336e guibg=#000000
+highlight String         guifg=#ff336e guibg=#000000
 
 " number       ----> a number constant : 123 , 0xFF
-highlight Number       guifg=#eb9842 guibg=#000000
+highlight Number         guifg=#eb9842 guibg=#000000
 
 " Boolean      ----> true , false , TRUE , FALSE 
-highlight Boolean      guifg=#5499c7 guibg=#000000
+highlight Boolean        guifg=#2980b9 guibg=#000000
 
 " Float        ----> 3.14159265359  3.3e10
-highlight Float        guifg=#eb9842 guibg=#000000
+highlight Float          guifg=#eb9842 guibg=#000000
 
 " END CONSTANT
 
@@ -145,21 +161,24 @@ highlight Float        guifg=#eb9842 guibg=#000000
 " BEGIN STATEMENT
 
 " Statement    ---->
-highlight Statement    guifg=#999999 guibg=#000000
+highlight Statement      guifg=#999999 guibg=#000000
 
-" Conditional  ----> 
-highlight Conditional  guifg=#999999 guibg=#000000
+" Conditional  ----> if , elseif , else 
+highlight Conditional    guifg=#2980b9 guibg=#000000
 
 " Repeat       ----> for , do , while
-highlight Repeat       guifg=#999999 guibg=#000000
+highlight Repeat         guifg=#2980b9 guibg=#000000
  
 " Label        ----> case , default , etc
-highlight Label        guifg=#999999 guibg=#000000
+highlight Label          guifg=#f4d03f guibg=#000000
+
+" Keyword
+highlight Keyword        guifg=#f4d03f guibg=#000000
 
 " operator     ----> sizeof , '+' , '*' , etc.
-highlight Operator     guifg=#344952 guibg=#000000
+highlight Operator       guifg=#344952 guibg=#000000
 
 " Exception    ----> try , catch , throw
-highlight Exception    guifg=#999999 guibg=#000000
+highlight Exception      guifg=#ff336e guibg=#000000
 
 " END  STATEMENT
