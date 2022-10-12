@@ -23,7 +23,7 @@ set laststatus=2
 
 set backspace=indent,eol,start
 
-set lines=60
+set lines=50
 set columns=100
 
 
@@ -33,20 +33,64 @@ nmap <C-S> <ESC>:w<CR>
 nmap <C-T> <ESC>:tabnew<CR>
 nmap <C-,> <ESC>:tabprev<CR>
 nmap <C-.> <ESC>:tabnext<CR>
+nmap <C-B> <ESC>:buffers<CR>
 
 cmap <C-S> <ESC>:w<CR>
 cmap <C-T> <ESC>:tabnew<CR>
 cmap <C-,> <ESC>:tabprev<CR>
 cmap <C-.> <ESC>:tabnext<CR>
+cmap <C-B> <ESC>:buffers<CR>
 
-imap <C-S> <ESC>:w<CR>li
+imap <C-S> <ESC>:w<CR>i
 imap <C-T> <ESC>:tabnew<CR>
 imap <C-,> <ESC>:tabprev<CR>
 imap <C-.> <ESC>:tabnext<CR>
+imap <C-B> <ESC>:buffers<CR>
 
 
 syntax on
 filetype indent on
+
+function! HLSearch()
+	if &hls
+		return 'H'
+	else
+		return ' '
+	endif
+endfunction
+
+function! HasBOM()
+	if &bomb
+		return 'BOM-O'
+	else 
+		return 'BOM-X'
+	endif
+endfunction
+
+
+set statusline=
+set statusline+=%1*\ %n\                                  "buffer number
+set statusline+=%2*\ %<%F\                                "filename
+set statusline+=%3*\ %y\                                  "file type
+set statusline+=%4*\ %{&fenc!=''?&fenc:&enc}\             "encoding
+set statusline+=%5*\ %{HasBOM()}\                         "encoding2
+set statusline+=%6*\ %{&ff}\                              "fileFormat
+set statusline+=%7*\ %{&spelllang}\                       "language
+set statusline+=%8*\ %{HLSearch()}\                       "highlight search mode
+set statusline+=%9*\ %=\ row:%l/%L\ (%03p%%)\             "row number
+set statusline+=%9*\ col:%03c\                            "column
+set statusline+=%0*\ \ %m%r%w\ %P\ \                      "status - can be modified/readonly
+
+
+highlight User1         guifg=#dddddd guibg=#e74c3c
+highlight User2         guifg=#000000 guibg=#f5b041
+highlight User3         guifg=#000000 guibg=#f4d03f
+highlight User4         guifg=#000000 guibg=#2ecc71
+highlight User5         guifg=#000000 guibg=#e74c3c
+highlight User6         guifg=#000000 guibg=#f4d03f
+highlight User7         guifg=#000000 guibg=#2ecc71
+highlight User8         guifg=#000000 guibg=#a569bd
+highlight User9         guifg=#f4d03f guibg=#273746
 
 
 " BEGIN 
@@ -62,6 +106,7 @@ highlight Comment       guifg=#666666 guibg=#000000
 
 " statusline
 highlight StatusLine    guifg=#2980b9 guibg=#111111
+
 highlight StatusLineNC  guifg=#2980b9 guibg=#111111
 
 " nonText
@@ -70,7 +115,7 @@ highlight NonText       guifg=#666666 guibg=#000000
 "highlight Cursor        guibg=#666666
 highlight Cursor        guibg=#ff336e
 
-"visual block
+"visual block/mode
 highlight Visual        guibg=#fdedec
 " END
 
@@ -81,7 +126,7 @@ highlight Visual        guibg=#fdedec
 " BEGIN IDENTIFIER
 
 " identifier   ----> any variable name
-highlight Identifier     guifg=#999999 guibg=#000000
+highlight Identifier     guifg=#aaaaaa guibg=#000000
 
 " function     ----> function name
 highlight Function       guifg=#cccccc guibg=#000000
@@ -182,4 +227,3 @@ highlight Operator       guifg=#344952 guibg=#000000
 highlight Exception      guifg=#ff336e guibg=#000000
 
 " END  STATEMENT
-
