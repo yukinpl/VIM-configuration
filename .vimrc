@@ -23,7 +23,7 @@ set laststatus=2
 
 set backspace=indent,eol,start
 
-set lines=50
+set lines=60
 set columns=100
 
 
@@ -39,7 +39,7 @@ cmap <C-T> <ESC>:tabnew<CR>
 cmap <C-,> <ESC>:tabprev<CR>
 cmap <C-.> <ESC>:tabnext<CR>
 
-imap <C-S> <ESC>:w<CR>i
+imap <C-S> <ESC>:w<CR>li
 imap <C-T> <ESC>:tabnew<CR>
 imap <C-,> <ESC>:tabprev<CR>
 imap <C-.> <ESC>:tabnext<CR>
@@ -62,7 +62,6 @@ highlight Comment       guifg=#666666 guibg=#000000
 
 " statusline
 highlight StatusLine    guifg=#2980b9 guibg=#111111
-
 highlight StatusLineNC  guifg=#2980b9 guibg=#111111
 
 " nonText
@@ -71,6 +70,7 @@ highlight NonText       guifg=#666666 guibg=#000000
 "highlight Cursor        guibg=#666666
 highlight Cursor        guibg=#ff336e
 
+"visual block
 highlight Visual        guibg=#fdedec
 " END
 
@@ -81,7 +81,7 @@ highlight Visual        guibg=#fdedec
 " BEGIN IDENTIFIER
 
 " identifier   ----> any variable name
-highlight Identifier     guifg=#aaaaaa guibg=#000000
+highlight Identifier     guifg=#999999 guibg=#000000
 
 " function     ----> function name
 highlight Function       guifg=#cccccc guibg=#000000
@@ -182,3 +182,4 @@ highlight Operator       guifg=#344952 guibg=#000000
 highlight Exception      guifg=#ff336e guibg=#000000
 
 " END  STATEMENT
+
