@@ -82,11 +82,11 @@ set statusline+=%9*\ col:%03c\                            "column
 set statusline+=%0*\ \ %m%r%w\ %P\ \                      "status - can be modified/readonly
 
 
-highlight User1         guifg=#dddddd guibg=#e74c3c
-highlight User2         guifg=#000000 guibg=#f5b041
+highlight User1         guifg=#000000 guibg=#f4d03f
+highlight User2         guifg=#f4d03f guibg=#273746
 highlight User3         guifg=#000000 guibg=#f4d03f
 highlight User4         guifg=#000000 guibg=#2ecc71
-highlight User5         guifg=#000000 guibg=#e74c3c
+highlight User5         guifg=#000000 guibg=#ec7063
 highlight User6         guifg=#000000 guibg=#f4d03f
 highlight User7         guifg=#000000 guibg=#2ecc71
 highlight User8         guifg=#000000 guibg=#a569bd
