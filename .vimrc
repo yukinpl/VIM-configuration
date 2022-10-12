@@ -1,4 +1,11 @@
 set number
+"set numberwidth=4
+set filetype=vim
+set fileformat=dos
+set fileformats=dos,unix,mac
+
+set langmenu=en
+set helplang=en
 
 set autoindent
 set smartindent
@@ -7,15 +14,16 @@ set cindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
 set hlsearch
 
 set ruler
 set nocompatible
 set visualbell
 
+set encoding=utf-8
 set fileencoding=utf-8
-set fencs=utf-8,ucs-bom,euc-kr
-set guifont=Ubuntu\ Mono:h12
+set fileencodings=utf-8,ucs-bom,euc-kr
 
 set showmatch
 set wmnu
@@ -26,6 +34,7 @@ set backspace=indent,eol,start
 set lines=50
 set columns=100
 
+set guifont=Ubuntu\ Mono:h12
 
 
 
