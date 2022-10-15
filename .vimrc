@@ -31,10 +31,21 @@ set laststatus=2
 
 set backspace=indent,eol,start
 
+
+if has("gui_running")
+
 set lines=50
 set columns=100
 
 set guifont=Ubuntu\ Mono:h12
+
+endif
+
+if $TERM == "xterm-256color"
+
+set t_Co=256
+
+endif
 
 
 
@@ -91,6 +102,15 @@ set statusline+=%9*\ col:%03c\                            "column
 set statusline+=%0*\ \ %m%r%w\ %P\ \                      "status - can be modified/readonly
 
 
+if &t_Co > 255
+
+colorscheme default
+
+endif
+
+
+if has("gui_running")
+
 highlight User1         guifg=#000000 guibg=#f4d03f
 highlight User2         guifg=#f4d03f guibg=#273746
 highlight User3         guifg=#000000 guibg=#f4d03f
@@ -100,6 +120,30 @@ highlight User6         guifg=#000000 guibg=#f4d03f
 highlight User7         guifg=#000000 guibg=#2ecc71
 highlight User8         guifg=#000000 guibg=#a569bd
 highlight User9         guifg=#f4d03f guibg=#273746
+
+endif
+
+
+if &t_Co > 255
+
+highlight User1         ctermfg=232   ctermbg=228
+highlight User2         ctermfg=227   ctermbg=235
+highlight User3         ctermfg=232   ctermbg=228
+highlight User4         ctermfg=232   ctermbg=84
+highlight User5         ctermfg=195   ctermbg=198
+highlight User6         ctermfg=232   ctermbg=228
+highlight User7         ctermfg=232   ctermbg=84
+highlight User8         ctermfg=195   ctermbg=93
+highlight User9         ctermfg=227   ctermbg=235
+
+endif
+
+
+
+
+
+
+if has("gui_running")
 
 
 " BEGIN 
@@ -236,3 +280,53 @@ highlight Operator       guifg=#344952 guibg=#000000
 highlight Exception      guifg=#ff336e guibg=#000000
 
 " END  STATEMENT
+
+
+endif
+
+
+
+
+
+if &t_Co > 255
+
+highlight Normal        ctermfg=246   ctermbg=232
+highlight LineNr        ctermfg=238   ctermbg=232
+highlight Comment       ctermfg=241   ctermbg=232
+highlight StatusLine    ctermfg=33    ctermbg=225
+highlight StatusLineNC  ctermfg=33    ctermbg=225
+highlight NonText       ctermfg=241   ctermbg=232
+highlight Cursor                      ctermbg=162
+highlight Visual                      ctermbg=225
+
+highlight Identifier    ctermfg=247   ctermbg=232
+highlight Function      ctermfg=251   ctermbg=232
+highlight Tag           ctermfg=198   ctermbg=232
+
+highlight Include       ctermfg=251   ctermbg=232
+highlight Define        ctermfg=251   ctermbg=232
+highlight Macro         ctermfg=251   ctermbg=232
+highlight Precondit     ctermfg=251   ctermbg=232
+
+highlight Type          ctermfg=76    ctermbg=232
+highlight StorageClass  ctermfg=33    ctermbg=232
+highlight Structure     ctermfg=33    ctermbg=232
+highlight Typedef       ctermfg=114   ctermbg=232
+
+highlight Character     ctermfg=162   ctermbg=232
+highlight SpeicialChar  ctermfg=220   ctermbg=232
+highlight String        ctermfg=162	  ctermbg=232
+highlight Number        ctermfg=172   ctermbg=232
+highlight Float         ctermfg=172   ctermbg=232
+highlight Boolean       ctermfg=26    ctermbg=232
+
+highlight Statement     ctermfg=246   ctermbg=232
+highlight Conditional   ctermfg=26    ctermbg=232
+highlight Repeat        ctermfg=26    ctermbg=232
+
+highlight Label         ctermfg=227   ctermbg=232
+highlight Keyword       ctermfg=227   ctermbg=232
+highlight Operator      ctermfg=239   ctermbg=232
+highlight Exception     ctermfg=204   ctermbg=232
+
+endif
