@@ -61,7 +61,7 @@ cmap <C-,> <ESC>:tabprev<CR>
 cmap <C-.> <ESC>:tabnext<CR>
 cmap <C-B> <ESC>:buffers<CR>
 
-imap <C-S> <ESC>:w<CR>i
+imap <C-S> <ESC>:w<CR>li
 imap <C-T> <ESC>:tabnew<CR>
 imap <C-,> <ESC>:tabprev<CR>
 imap <C-.> <ESC>:tabnext<CR>
