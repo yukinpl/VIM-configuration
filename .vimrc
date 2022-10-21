@@ -282,6 +282,24 @@ highlight Exception      guifg=#ff336e guibg=#000000
 " END  STATEMENT
 
 
+
+" BEGIN DIFF
+
+" added line
+highlight DiffAdd        guibg=#222222
+
+" changed line
+highlight DiffChange     guibg=#222222
+
+" delete characters
+highlight DiffDelete     guifg=#f4d03f guibg=#444444
+
+" different text
+highlight DiffText       guifg=#f4d03f guibg=#444444
+
+" END DIFF
+
+
 endif
 
 
