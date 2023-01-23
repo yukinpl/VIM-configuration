@@ -144,7 +144,7 @@ if has("gui_running")
 
 highlight DanielBlue    guifg=#2980b9 guibg=#000000
 highlight DanielGreen   guifg=#27ae60 guibg=#000000
-highlight DanielYellow  guifg=#f7ed7d guibg=#000000
+highlight DanielYellow  guifg=#d8ce5b guibg=#000000
 
 syntax keyword cppKeyword bool
 highlight link cppKeyword DanielGreen
@@ -248,7 +248,7 @@ highlight Character      guifg=#ff336e guibg=#000000
 highlight SpeicialChar   guifg=#f4d03f guibg=#000000
 
 " string       ----> constant "this is a string"
-highlight String         guifg=#ff336e guibg=#000000
+highlight String         guifg=#ec7063 guibg=#000000
 
 " number       ----> a number constant : 123 , 0xFF
 highlight Number         guifg=#eb9842 guibg=#000000
