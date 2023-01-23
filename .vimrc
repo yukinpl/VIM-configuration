@@ -144,7 +144,7 @@ if has("gui_running")
 
 highlight DanielBlue    guifg=#2980b9 guibg=#000000
 highlight DanielGreen   guifg=#27ae60 guibg=#000000
-highlight DanielYellow  guifg=#e9dd56 guibg=#000000
+highlight DanielYellow  guifg=#f7ed7d guibg=#000000
 
 syntax keyword cppKeyword bool
 highlight link cppKeyword DanielGreen
